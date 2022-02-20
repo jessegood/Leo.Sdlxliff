@@ -60,12 +60,12 @@ public static class DefaultTranslationOrigin
     public const string AdaptiveMachineTranslation = "amt";
 
     /// <summary>
-    /// Neural machine translated content
+    /// Adaptive machine translated content
     /// </summary>
     public const string NeuralMachineTranslation = "nmt";
 
     /// <summary>
-    /// Machine translated content
+    /// Adaptive machine translated content
     /// </summary>
     public const string AutomaticTranslation = "automatic-translation";
 }
