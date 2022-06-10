@@ -106,9 +106,9 @@ public sealed class TranslationUnit : ITranslationUnit
         private readonly IDictionary<string, ISegmentPair> segmentPairs = new Dictionary<string, ISegmentPair>();
         private bool isLocked = false;
         private LockType lockType = LockType.Unlocked;
-        private SegmentationSource segmentSource = new SegmentationSource();
-        private Source source = new Source();
-        private Target target = new Target();
+        private SegmentationSource segmentSource = new();
+        private Source source = new();
+        private Target target = new();
         private Translate translate = Translate.Yes;
         private string translationUnitId = string.Empty;
 
