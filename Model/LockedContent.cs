@@ -1,5 +1,7 @@
-﻿using Leo.Sdlxliff.Interfaces;
+﻿using Leo.Sdlxliff.Helpers;
+using Leo.Sdlxliff.Interfaces;
 using Leo.Sdlxliff.Model.Common;
+using System;
 
 namespace Leo.Sdlxliff.Model;
 
@@ -43,14 +45,13 @@ public class LockedContent : TranslationUnitContent
 
     public override ITranslationUnitContent DeepCopy()
     {
-        LockedContent copy = new()
+        var transUnit = LockedTranslationUnit?.DeepCopy();
+        return new LockedContent()
         {
             Id = Id,
-            XId = XId,
-            LockedTranslationUnit = LockedTranslationUnit
+            XId = transUnit?.TranslationUnitId ?? string.Empty,
+            LockedTranslationUnit = transUnit
         };
-
-        return copy;
     }
 
     public override string ToString()

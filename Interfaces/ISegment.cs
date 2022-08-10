@@ -20,6 +20,8 @@ public interface ISegment
     IEnumerable<ITranslationUnitContent> AllContent();
 
     bool Contains(string searchString, bool caseSensitive, bool useRegex, bool searchInTags);
+    
     ITranslationUnitContent DeepCopy();
+
     void RemoveFromParent();
 }
