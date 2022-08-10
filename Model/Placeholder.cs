@@ -103,6 +103,7 @@ public class Placeholder : TranslationUnitContent, ISubSegment
     {
         Placeholder copy = new()
         {
+            Id = Id,
             CanHide = CanHide,
             Contents = Contents,
             ContentType = ContentType,
